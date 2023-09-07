@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SquareRepoViewModel @Inject constructor(
     pager: Pager<Int, SquareRepoEntity>,
-    val state: GlobalState
+    private val state: GlobalState
 ) : ViewModel() {
 
     val sharedState = state.sharedState

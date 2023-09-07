@@ -32,7 +32,8 @@ object AppModule {
                 context,
                 SquareRepoDatabase::class.java,
                 "square_repos.db"
-            ).build()
+            ).fallbackToDestructiveMigration()
+            .build()
     }
 
     @Provides
@@ -58,7 +59,7 @@ object AppModule {
                 squareRepoApi = squareRepoApi
             ),
             pagingSourceFactory = {
-              squareRepoDb.dao.pagingSource()
+                squareRepoDb.dao.pagingSource()
             }
         )
     }

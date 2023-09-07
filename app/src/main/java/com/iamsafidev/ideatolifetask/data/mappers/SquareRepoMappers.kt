@@ -8,7 +8,7 @@ fun SquareRepoDto.toSquareRepoEntity(): SquareRepoEntity {
     return SquareRepoEntity(
         id = id.toInt(),
         name = name,
-        stargazersCount = stargazersCount
+        stargazersCount = stargazers_count
     )
 }
 
