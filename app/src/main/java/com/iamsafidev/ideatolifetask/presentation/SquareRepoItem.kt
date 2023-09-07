@@ -15,7 +15,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.iamsafidev.ideatolifetask.R
 import com.iamsafidev.ideatolifetask.domain.SquareRepo
+import com.iamsafidev.ideatolifetask.presentation.UiText
 import com.iamsafidev.ideatolifetask.ui.theme.IdeaToLifeTaskTheme
 
 @Composable
@@ -42,7 +44,7 @@ fun SquareRepoItem(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "Stars : ${squareRepo.stargazersCount}",
+                text = UiText.StringResource(R.string.stars_count, listOf(squareRepo.stargazersCount)).asString(),
                 fontStyle = FontStyle.Italic,
                 color = Color.DarkGray,
                 modifier = Modifier.fillMaxWidth()

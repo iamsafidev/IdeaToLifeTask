@@ -9,7 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.iamsafidev.ideatolifetask.R
 import com.iamsafidev.ideatolifetask.domain.SquareRepo
+import com.iamsafidev.ideatolifetask.presentation.UiText
 
 @Composable
 fun SquareRepoDetailScreen(squareRepoDetails: SquareRepo) {
@@ -27,7 +29,7 @@ fun SquareRepoDetailScreen(squareRepoDetails: SquareRepo) {
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
-            text = "Stars : ${squareRepoDetails.stargazersCount}",
+            text = UiText.StringResource(R.string.stars_count, listOf(squareRepoDetails.stargazersCount)).asString(),
             color = Color.DarkGray,
             modifier = Modifier.fillMaxWidth()
         )

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IdeaToLifeTask</string>
+    <string name="stars_count">Stars : %d</string>
 </resources>
