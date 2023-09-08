@@ -91,6 +91,7 @@ dependencies {
     implementation "androidx.room:room-ktx:2.5.2"
     kapt "androidx.room:room-compiler:2.5.2"
     implementation "androidx.room:room-paging:2.5.2"
+    implementation "androidx.room:room-testing:2.5.2"
 
     //Junit5
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.9.3"
@@ -99,4 +100,14 @@ dependencies {
 
     //Assertion Library for Kotlin
     testImplementation 'com.willowtreeapps.assertk:assertk:0.26.1'
+
+    //Mockk
+    testImplementation "io.mockk:mockk:1.12.5"
+
+    //MockWebServer
+    testImplementation "com.squareup.okhttp3:mockwebserver:4.11.0"
+
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
+
+    testImplementation 'app.cash.turbine:turbine:1.0.0'
 }

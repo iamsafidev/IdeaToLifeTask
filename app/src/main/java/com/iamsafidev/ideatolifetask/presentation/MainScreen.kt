@@ -17,7 +17,7 @@ fun MainScreen() {
     ) {
         composable("square_repos") {
             val viewModel = hiltViewModel<SquareRepoViewModel>()
-            val squareRepos = viewModel.squareRepoPagingFlow.collectAsLazyPagingItems()
+            val squareRepos = viewModel.getSquareReposPagingFlow().collectAsLazyPagingItems()
 
             SquareRepoScreen(
                 squareRepos = squareRepos,
